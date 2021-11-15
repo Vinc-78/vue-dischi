@@ -1,7 +1,9 @@
 <template>
   <div id="app">
+  
+  <main><DischiContainer></DischiContainer></main>
    
-<DischiContainer></DischiContainer>
+
 
   </div>
 </template>

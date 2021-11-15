@@ -1,18 +1,20 @@
 <template>
 
-<div class="card" style="width: 18rem;">
-  <img :src="poster" class="card-img-top" alt="...">
+<div class="card " >
+  <img :src="poster" class="card-img-top " alt="...">
 
   <div class="card-body">
-    <h5 class="card-title">{{title}}</h5>
+    <h5 class="card-title text-center fs-4">{{title}}</h5>
     
   </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">{{author}}</li>
-    <li class="list-group-item">{{genre}}</li>
-    <li class="list-group-item">{{year}}</li>
-  </ul>
- 
+  <div class="card-text text-center fs-5">
+        <ul>
+          <li> {{ author }}</li>
+          <li> {{ genre }}</li>
+          <li> {{ year }}</li>
+        </ul>
+    </div>
+  
 </div>
     
 </template>

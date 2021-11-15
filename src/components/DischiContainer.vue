@@ -2,10 +2,12 @@
 
 <div class="container-fluid bg-dark">
 
-<div class="container">
-  <div class="row row-cols-5 g-4">
+<div class="nav" ></div>
 
-      <div class="col" v-for="(disco,i) in elencoDischi" :key="i">
+<div class="container py-5">
+  <div class="row row-cols-5 g-4 pt-5">
+
+      <div class="col " v-for="(disco,i) in elencoDischi" :key="i">
           
           <DiscoSingolo 
           :poster="disco.poster"

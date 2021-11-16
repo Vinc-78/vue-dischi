@@ -22,6 +22,8 @@
         </div>
       </div>
     </div>
+    
+    <Loader v-if="loading === true"></Loader>
   </div>
 </template>
 
@@ -29,6 +31,7 @@
 import axios from "axios";
 import DiscoSingolo from "./DiscoSingolo.vue";
 import BarraDiRicerca from "./BarraDiRicerca.vue";
+import Loader from "./Loader.vue";
 
 export default {
   name: "DischiContainer",
@@ -36,12 +39,14 @@ export default {
   components: {
     DiscoSingolo,
     BarraDiRicerca,
+    Loader,
   },
 
   data() {
     return {
       elencoDischi: [],
       genereCercato: "",
+      loading: true,
     };
   },
 
@@ -79,6 +84,9 @@ export default {
       .get("https://flynn.boolean.careers/exercises/api/array/music")
       .then((risposta) => {
         this.elencoDischi.push(...risposta.data.response);
+        setTimeout(() => {
+          this.loading = false;
+        }, 800);
       });
   },
 };
